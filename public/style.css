@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: whitesmoke;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 100%;
+  max-width: 40rem;
+  margin: 20rem auto;
+}
+header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.inputs input {
+  flex: 1 0 auto;
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  height: 5rem;
+  outline: none;
+  border: none;
+}
+.inputs button {
+  padding: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  margin-right: 1.5rem;
+  z-index: 100;
+  cursor: pointer;
+}
+.todo-container {
+  padding: 2rem;
+}
+.todo-list {
+  width: 40rem;
+  height: 50rem;
+  overflow: auto;
+}
+.todo-list li {
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+.todo-list .todo {
+  background-color: gainsboro;
+  margin: 2rem 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.todo-list .todo:hover button{
+  display: inline;
+}
+.todo-list .todo li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0rem;
+}
+.todo-list .todo li button {
+  background-color: red;
+  color: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 1.5rem;
+  display: none;
+}
+footer button {
+  width: 40rem;
+  margin: 2rem 0rem;
+  padding: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: blueviolet;
+  color: white;
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  html {
+    font-size: 53.5%;
+  }
+  .container {
+    height: 100vh;
+    margin: 0;
+  }
+  body {
+    background-color: whitesmoke;
+  }
+  .todo-list {
+    width: 40rem;
+    height: 60vh;
+    overflow: auto;
+    justify-self: stretch;
+  }
+}
+.todo-list .todo li button .visible{
+  display: inline-block;
+}
+.fa-trash,
+.fa-plus{
+  pointer-events: none;
+}
+button{
+  cursor: pointer;
+}
